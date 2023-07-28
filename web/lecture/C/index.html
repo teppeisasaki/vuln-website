@@ -1,0 +1,56 @@
+<html lang="ja">
+
+<head>
+    <title>Login form</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background: linear-gradient(115deg, #56d8e4 10%, #9f01ea 90%);
+        }
+    }
+    </style>
+    <div class="container">
+        <div class="row justify-content-center align-items-center" style="height: 100vh;">
+            <div class="col-md-4 p-3 shadow" style="border: solid 1px gray; border-radius: 7px; background-color: white;">
+                <div class="col-md-12">
+                    <form class="form" id="form" onsubmit="login()">
+                        <h3 class="text-center mt-3 mb-3" style="font-weight: 700;">Sign in</h3>
+                        <div class="row">
+                            <span class="text-center" style="font-weight: 300;">admin ページへのログイン</span>
+                        </div>
+                        <div class="row">
+                            <span id="alert" class="text-center text-danger my-1" style="visibility: hidden;">ユーザ名またはパスワードが違います</span>
+                        </div>
+                        <div class="form-group my-3">
+                            <label for="username" class="pb-1">Username</label><br>
+                            <input type="text" id="username" name="username" class="form-control" autocomplete="username" required>
+                        </div>
+                        <div class="form-group my-3">
+                            <label for="password" class="pb-1">Password</label><br>
+                            <input type="password" id="password" name="password" class="form-control" autocomplete="off" required>
+                        </div>
+                        <div class="d-grid mt-4">
+                            <input type="submit" class="btn btn-primary py-1" style="font-weight: 300;" value="Sign in">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function _0x4286(){const _0x48e705=['13962816mdTaec','yusuke.sasaki','16dNkZKt','4080843pQdRay','404859eDzWjU','24QITXWt','alert','605348MHppLe','hidden','visibility','279832rRXzbK','value','1AGOjdz','2040845SkAgIg','6MgeFGd','4910190KPzsFx','password','username','fbppre0136','11dnOzFt','getElementById','../hidden/admin/index.html','preventDefault','style','addEventListener'];_0x4286=function(){return _0x48e705;};return _0x4286();}(function(_0x2e558e,_0x545b5b){const _0x562e16=_0x1165,_0x375366=_0x2e558e();while(!![]){try{const _0xbb5fc6=-parseInt(_0x562e16(0xfd))/0x1*(-parseInt(_0x562e16(0xf8))/0x2)+parseInt(_0x562e16(0xf5))/0x3*(-parseInt(_0x562e16(0xf3))/0x4)+-parseInt(_0x562e16(0xfe))/0x5*(parseInt(_0x562e16(0xff))/0x6)+-parseInt(_0x562e16(0xfb))/0x7*(parseInt(_0x562e16(0xf6))/0x8)+parseInt(_0x562e16(0xf4))/0x9+-parseInt(_0x562e16(0x100))/0xa*(parseInt(_0x562e16(0x104))/0xb)+parseInt(_0x562e16(0xf1))/0xc;if(_0xbb5fc6===_0x545b5b)break;else _0x375366['push'](_0x375366['shift']());}catch(_0x41a289){_0x375366['push'](_0x375366['shift']());}}}(_0x4286,0x58125));function _0x1165(_0x1d1e2d,_0x206f81){const _0x4286ab=_0x4286();return _0x1165=function(_0x116512,_0x57c512){_0x116512=_0x116512-0xef;let _0x39cbc6=_0x4286ab[_0x116512];return _0x39cbc6;},_0x1165(_0x1d1e2d,_0x206f81);}function login(){const _0x37bb44=_0x1165,_0x4fb9e7=document[_0x37bb44(0x105)](_0x37bb44(0xf7)),_0x625031=form[_0x37bb44(0x102)],_0x570f61=form[_0x37bb44(0x101)];if(_0x625031[_0x37bb44(0xfc)]!=_0x37bb44(0xf2)){initialize(_0x4fb9e7,_0x625031,_0x570f61);return;}if(_0x570f61[_0x37bb44(0xfc)]!=_0x37bb44(0x103)){initialize(_0x4fb9e7,_0x625031,_0x570f61);return;}_0x4fb9e7[_0x37bb44(0xef)][_0x37bb44(0xfa)]=_0x37bb44(0xf9),window['location']['href']=_0x37bb44(0x106);}function initialize(_0x5cf0ec,_0x61528d,_0x4cf589){const _0x5cc492=_0x1165;_0x5cf0ec['style']['visibility']='visible',_0x61528d[_0x5cc492(0xfc)]='',_0x4cf589[_0x5cc492(0xfc)]='';}(function(){const _0x5dcde4=_0x1165,_0x10ac31=document[_0x5dcde4(0x105)]('form');_0x10ac31[_0x5dcde4(0xf0)]('submit',function(_0x449732){const _0x4bc90d=_0x5dcde4;_0x449732[_0x4bc90d(0x107)]();});}());
+    </script>
+</body>
+
+</html>
