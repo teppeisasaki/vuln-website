@@ -1,0 +1,94 @@
+<html lang="ja">
+
+<head>
+    <title>Login form</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container-fluid mx-3 mb-1">
+              <a class="navbar-brand" href="./index.html">Vulntter</a>
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link" href="./index.html">Home</a>
+                  </li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                      <a class="nav-link" href="./login.html">Login</a>
+                    </li>
+                </ul>
+            </div>
+          </nav>
+
+        <div class="row justify-content-center align-items-start pt-5" style="height: 100vh;">
+            <div class="col-md-4 p-3 shadow" style="border: solid 1px gray; border-radius: 7px; background-color: white;">
+                <div class="col-md-12">
+                    <form class="form" id="form" onsubmit="login()">
+                        <h3 class="text-center mt-3 mb-3" style="font-weight: 700;">Sign in</h3>
+                        <div class="row">
+                            <span class="text-center" style="font-weight: 300;">Vulntterへのログイン</span>
+                        </div>
+                        <div class="row">
+                            <span id="alert" class="text-center text-danger my-1" style="visibility: hidden;">ユーザ名またはパスワードが違います</span>
+                        </div>
+                        <div class="form-group my-3">
+                            <label for="username" class="pb-1">Username</label><br>
+                            <input type="text" id="username" name="username" class="form-control" autocomplete="username" required>
+                        </div>
+                        <div class="form-group my-3">
+                            <label for="password" class="pb-1">Password</label><br>
+                            <input type="password" id="password" name="password" class="form-control" autocomplete="off" required>
+                        </div>
+                        <div class="d-grid mt-4">
+                            <input type="submit" class="btn btn-primary py-1" style="font-weight: 300;" value="Sign in">
+                        </div>
+                        <div class="d-grid mt-3 text-center">
+                            <a class="text-decoration-none" href="./forget.html">パスワードのお忘れの方はこちら</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // ログイン機能
+        function login() {
+            // アラート文字の参照
+            const alert = document.getElementById('alert');
+            // 入力されたユーザ名とパスワードを取得
+            const username = form.username;
+            const password = form.password;
+
+            // ユーザ名とパスワードの認証
+            if (username.value == 'yusuke.sasaki' && password.value == '' && false) {
+                alert.style.visibility = 'hidden';
+            } else {
+                alert.style.visibility = 'visible';
+            }
+
+            // フォームの初期化
+            username.value = '';
+            password.value = '';
+        }
+
+        // ページ遷移を防ぐ
+        (function() {
+            const form = document.getElementById('form');
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+            });
+        }());
+    </script>
+</body>
+
+</html>
